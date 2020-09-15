@@ -1,9 +1,23 @@
+import { Card, CardContent, Typography } from '@material-ui/core'
 import React from 'react'
 
-function Message({message}) {
+function Message({text, username}) {
     return (
         <div>
-            <h2>{message}</h2>
+            <Card>
+                <CardContent>
+                    <Typography
+                        color="white"
+                        variant="h5"
+                        component="h2"
+                    >
+                    {username}: {text}
+                    </Typography>
+                </CardContent>
+            
+            </Card>
+            
+
         </div>
     )
 }
